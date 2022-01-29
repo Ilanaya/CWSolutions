@@ -10,3 +10,7 @@ function getSum(a, b) {
     }
     return res + sortedNums[1];
 }
+function getSumPrmogression(a, b) {
+    const arithmProgSum = ((a + b) / 2) * (Math.abs(a - b) + 1);
+    return arithmProgSum;
+}
