@@ -2,13 +2,14 @@ function getSum(a, b) {
     if (a === b) {
         return a;
     }
-    const sortedNums = [a, b].sort((a, b) => a - b);
-    let res = 0;
-    while (sortedNums[0] !== sortedNums[1]) {
-        res += sortedNums[0];
-        sortedNums[0]++;
+    let min = Math.min(a, b),
+        max = Math.max(a, b);
+    let res = max;
+    while (min !== max) {
+        res += min;
+        min++;
     }
-    return res + sortedNums[1];
+    return res;
 }
 function getSumPrmogression(a, b) {
     const arithmProgSum = ((a + b) / 2) * (Math.abs(a - b) + 1);
